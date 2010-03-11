@@ -1,0 +1,22 @@
+These steps were tested with MSVS 2008 SP1 (vc9), you need to run the commands from the console
+with vc9 environment (after running "%VS90COMNTOOLS%\vsvars32.bat").
+
+1. Download the complete source code from http://www.php.net/downloads.php
+   (use 5.2.x branch as 5.3.x is not supported/tested with mBot)
+   
+2. Unpack PHP into some directory, for example c:\projects\php-src\php-5.2.13
+
+3. Download http://www.php.net/extra/win32build.zip, unpack into c:\projects\php-src so that the full path is
+   c:\projects\php-src\win32build.
+
+4. Configure for the minimal build:
+
+cscript /nologo configure.js --disable-all --disable-ipv6 --enable-cli --enable-one-shot --enable-object-out-dir= --with-php-build=..\win32build --enable-prefix=C:\php5
+
+5. We don't wan't a MSVCR*.dll dependency, so some tweaking is required to make it link statically.
+   Open Makefile, in CFLAGS change /MD to /MT, in LIBS add LIBCMT.lib.
+   
+   To get rid of the compilation error, open zend\zend_stream.c file and remove/comment the following line:
+   ZEND_DLIMPORT int isatty(int fd);
+   
+6. run "nmake" to build, should produce php5ts.dll in the Release_TS directory.
