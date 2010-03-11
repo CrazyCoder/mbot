@@ -1,0 +1,7 @@
+LIBRARY	"mbot"
+
+EXPORTS
+	MirandaPluginInfoEx
+	MirandaPluginInterfaces
+	Load
+	Unload

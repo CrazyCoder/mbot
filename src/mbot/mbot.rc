@@ -1,0 +1,298 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,3,6
+ PRODUCTVERSION 0,0,3,6
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041504b0"
+        BEGIN
+            VALUE "Comments", "MSP - Miranda Scripting Plugin (mBot)"
+            VALUE "CompanyName", "Piotr Pawluczuk"
+            VALUE "FileDescription", "MSP - Miranda Scripting Plugin (mBot)"
+            VALUE "FileVersion", "0, 0, 3, 6"
+            VALUE "InternalName", "MBot"
+            VALUE "LegalCopyright", "© 2004-2006 Piotr Pawluczuk | © 2007-2010 Serge Baranov"
+            VALUE "OriginalFilename", "mbot.dll"
+            VALUE "ProductName", "MSP - Miranda Scripting Plugin (mBot)"
+            VALUE "ProductVersion", "0, 0, 3, 6"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x415, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MBOTCONSOLE DIALOGEX 0, 0, 200, 152
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "MBot Console"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_MBCONSOLE,"RichEdit20A",ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL,0,0,199,101
+    EDITTEXT        IDC_MBCOMMANDBOX,0,117,199,35,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL | NOT WS_TABSTOP,WS_EX_ACCEPTFILES
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 186, 132
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,136,112,43,13
+    PUSHBUTTON      "Cancel",IDCANCEL,91,112,43,13
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 169, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,112,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,44,50,14
+    EDITTEXT        IDC_GS_EDIT,7,23,155,13,ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_GS_INFO,7,7,155,15
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MBOTCONSOLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\tbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "popup"
+    BEGIN
+        MENUITEM "Re|cache",                    ID_POPUP_RECACHE
+        MENUITEM "Uncache",                     ID_POPUP_UNCACHE
+        MENUITEM SEPARATOR
+        POPUP "Activate"
+        BEGIN
+            MENUITEM "File",                        ID_ACTIVATE_FILE
+            MENUITEM "Event",                       ID_ACTIVATE_EVENT
+        END
+        POPUP "Deactivate"
+        BEGIN
+            MENUITEM "File",                        ID_DEACTIVATE_FILE
+            MENUITEM "Event",                       ID_DEACTIVATE_EVENT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Unload",                      ID_POPUP_UNLOAD
+        MENUITEM "Uninstall",                   ID_POPUP_UNINSTALL
+    END
+    POPUP "popup2"
+    BEGIN
+        MENUITEM "Install Script",              ID_POPUP2_INSTALLSCRIPT
+        MENUITEM "Install Extension",           ID_POPUP2_INSTALLEXTENSION
+    END
+    POPUP "popup3"
+    BEGIN
+        MENUITEM "Configure",                   ID_POPUP3_CONFIGURE
+        MENUITEM SEPARATOR
+        MENUITEM "Disable",                     ID_POPUP3_DISABLE
+        MENUITEM "Enable",                      ID_POPUP3_ENABLE
+        MENUITEM SEPARATOR
+        MENUITEM "Uninstall",                   ID_POPUP3_UNINSTALL
+    END
+END
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS DIALOGEX 0, 0, 314, 254
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "General Settings",IDC_STATIC,7,3,300,126
+    CONTROL         "Disable all events",IDC_MBDISABLEEVENTS,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,15,26,283,10
+    CONTROL         "Disable file caching (overwrites script settings)",IDC_MBDISABLECACHE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,37,283,10
+    CONTROL         "Enable MBot",IDC_MBENABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,15,283,10
+    CONTROL         "Show MBot console on startup",IDC_MBSHOWCONSOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,59,283,10
+    GROUPBOX        "Command Tags",IDC_ADV1,7,129,300,41
+    CONTROL         "Show MBot console on error",IDC_MBSHOWCONSOLEERROR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,70,283,10
+    CONTROL         "Wrap console output",IDC_WRAPCONSOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,81,283,10
+    CONTROL         "Disable scheduler",IDC_DISABLESCHEDULER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,48,283,10
+    EDITTEXT        IDC_ADVSCRIPTTAG,15,140,20,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ADVCMDTAG,15,154,20,12,ES_AUTOHSCROLL
+    LTEXT           "Script tag (default: ""?>"")",IDC_ADVLABEL1,81,144,217,9
+    LTEXT           "Command tag (default: ""m>"")",IDC_ADVLABEL2,81,157,217,9
+    CONTROL         "Enable WWW Server",IDC_ENABLEWWW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,92,283,10
+    GROUPBOX        "Registered Handlers",IDC_ADV2,7,171,300,76
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,15,184,283,57
+    CONTROL         "Enable WWW Log",IDC_ENABLEWWW2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,103,283,10
+    CONTROL         "Show advanced script configuration (requires options restart);",IDC_ENABLEADVOPT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,113,283,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        VERTGUIDE, 15
+        VERTGUIDE, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 247
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
