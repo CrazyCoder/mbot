@@ -16,6 +16,9 @@ into your Miranda installation directory preserving the folders.
 
 If you want to compile it yourself, see docs/build.txt for instructions.
 
+Feel free to provide patches or contact me for the write access if
+you want to contribute to this project.
+
 
 CHANGES:
 
