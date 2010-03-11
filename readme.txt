@@ -14,7 +14,8 @@ statically with the C++ runtime and have no external dependencies.
 To install this version simply copy the contents of the /dist folder
 into your Miranda installation directory preserving the folders.
 
-If you want to compile it yourself, see docs/build.txt for instructions.
+If you want to compile it yourself, see docs/build.txt and build-php.txt
+for instructions.
 
 Feel free to provide patches or contact me for the write access if
 you want to contribute to this project.
