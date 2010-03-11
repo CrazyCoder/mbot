@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<mbot>
+	<console>
+		<!--font>Courier CE</font!-->
+		<fsize>13</fsize>
+		<topmost>0</topmost>
+		<!--tofile>1</tofile!-->
+	</console>
+	<php>
+		<!--change only if you need!-->
+		<max_execution_time>45</max_execution_time>
+		<memory_limit>8M</memory_limit>
+		<error_reporting>E_ALL</error_reporting>
+		<extensions>$(mroot)\mbot\extensions</extensions>
+	</php>
+	<!--add your own php.ini entries here!-->
+	<add_php>
+		<smtp>localhost</smtp>
+		<smtp_port>25</smtp_port>
+		<sendmail_from>nobody</sendmail_from>
+		<!-- extensions go here !-->
+		<!--extension>php_NAME.dll</extension!-->
+	</add_php>
+	<httpd>
+		<port>8081</port>
+		<wwwroot>$(mroot)/mbot/www</wwwroot>
+		<ip_mask>*</ip_mask>
+		<auth_req>0</auth_req>
+		<auth_usr>user</auth_usr>
+		<auth_pwd>1234</auth_pwd>
+		<dirs>
+			<dir path="/" auth_req="0" user="::" pass="::" ip_mask="*"/>
+		</dirs>
+	</httpd>
+</mbot>
