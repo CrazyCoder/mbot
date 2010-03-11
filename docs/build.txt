@@ -1,0 +1,8 @@
+Building MSP isn't as easy as you might expected. You need to collect following things:
+
+-) PHP source code (www.php.net)
+-) PHP development library (www.php.net - windows binaries)
+-) Microsoft Visual Studio 2008 SP1
+-) Miranda-IM source/headers
+
+Modify mbotvars.bat with your locations of PHP source tree and Miranda source tree and then run it.
