@@ -27,7 +27,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "cron.h"
 
 #pragma comment(lib,"comctl32.lib")
-#pragma comment(lib,"../../../php-new/php-5.2.13/Release_TS/php5ts")
+#pragma comment(lib,"php5ts.lib")
 
 /******************************************
  * Imports/Exports                        *

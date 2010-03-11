@@ -64,6 +64,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="$(PHP_HOME)/Release_TS"
 				IgnoreDefaultLibraryNames=""
 				ModuleDefinitionFile="mbot.def"
 				GenerateDebugInformation="true"
@@ -148,6 +149,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="$(PHP_HOME)/Release_TS"
 				GenerateManifest="false"
 				IgnoreAllDefaultLibraries="false"
 				IgnoreDefaultLibraryNames=""
