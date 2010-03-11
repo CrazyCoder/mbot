@@ -19,4 +19,7 @@ cscript /nologo configure.js --disable-all --disable-ipv6 --enable-cli --enable-
    To get rid of the compilation error, open zend\zend_stream.c file and remove/comment the following line:
    ZEND_DLIMPORT int isatty(int fd);
    
+   WARNING: the produced php5ts.dll will work fine with mBot, but will not work standalone with php.exe or php-cgi.exe
+            because of the static CRT, skip this step if you want to use this PHP version elsewhere.
+   
 6. run "nmake" to build, should produce php5ts.dll in the Release_TS directory.
