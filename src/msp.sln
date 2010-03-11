@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "utils\utils.vcproj", "{A45C2C2E-2662-48DE-A18D-5F52C9A86253}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libphp", "libphp\libphp.vcproj", "{E6589813-69E7-4F2D-A6DB-342D41C85698}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A45C2C2E-2662-48DE-A18D-5F52C9A86253} = {A45C2C2E-2662-48DE-A18D-5F52C9A86253}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mbot", "mbot\mbot.vcproj", "{E7893C5B-D58D-40ED-98C1-A6C29015401E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E6589813-69E7-4F2D-A6DB-342D41C85698} = {E6589813-69E7-4F2D-A6DB-342D41C85698}
+		{A45C2C2E-2662-48DE-A18D-5F52C9A86253} = {A45C2C2E-2662-48DE-A18D-5F52C9A86253}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A45C2C2E-2662-48DE-A18D-5F52C9A86253}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A45C2C2E-2662-48DE-A18D-5F52C9A86253}.Debug|Win32.Build.0 = Debug|Win32
+		{A45C2C2E-2662-48DE-A18D-5F52C9A86253}.Release|Win32.ActiveCfg = Release|Win32
+		{A45C2C2E-2662-48DE-A18D-5F52C9A86253}.Release|Win32.Build.0 = Release|Win32
+		{E6589813-69E7-4F2D-A6DB-342D41C85698}.Debug|Win32.ActiveCfg = DebugSt|Win32
+		{E6589813-69E7-4F2D-A6DB-342D41C85698}.Debug|Win32.Build.0 = DebugSt|Win32
+		{E6589813-69E7-4F2D-A6DB-342D41C85698}.Release|Win32.ActiveCfg = ReleaseSt|Win32
+		{E6589813-69E7-4F2D-A6DB-342D41C85698}.Release|Win32.Build.0 = ReleaseSt|Win32
+		{E7893C5B-D58D-40ED-98C1-A6C29015401E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E7893C5B-D58D-40ED-98C1-A6C29015401E}.Debug|Win32.Build.0 = Debug|Win32
+		{E7893C5B-D58D-40ED-98C1-A6C29015401E}.Release|Win32.ActiveCfg = Release|Win32
+		{E7893C5B-D58D-40ED-98C1-A6C29015401E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
